@@ -1,6 +1,8 @@
-# A node.js implementation of the Paillier cryptosystem
+# A node.js implementation of an extended Version for the Paillier cryptosystem
 
-This is a node.js implementation relying on the [node-bignum](https://github.com/justmoon/node-bignum) library by Stephan Thomas. Bignum is an arbitrary precision integral arithmetic for Node.js using OpenSSL. For a pure javascript implementation that can be used on browsers, please visit [paillier-bigint](https://github.com/juanelas/paillier-bigint).
+This is an extended version of the [paillier-bignum](https://github.com/juanelas/paillier-bigint). The change is adding a subtraction function to the Pailiier cryptosystem according to this [description](https://crypto.stackexchange.com/a/59448). In [Paillier Cryptosystem](https://en.wikipedia.org/wiki/Paillier_cryptosystem), the range of a message $m$ to be encrypted is $0\leq m <n$, in this package, because of introducing the subtraction function, the range of $m$ shrinks to $-n/4 < m < n/4$.
+
+This node.js implementation relying on the [node-bignum](https://github.com/justmoon/node-bignum) library by Stephan Thomas. Bignum is an arbitrary precision integral arithmetic for Node.js using OpenSSL. For a pure javascript implementation that can be used on browsers, please visit [paillier-bigint](https://github.com/juanelas/paillier-bigint).
 
 The Paillier cryptosystem, named after and invented by Pascal Paillier in 1999, is a probabilistic asymmetric algorithm for public key cryptography. A notable feature of the Paillier cryptosystem is its homomorphic properties.
 
@@ -90,6 +92,12 @@ let c1 = publicKey.encrypt(m1);
 let c2 = publicKey.encrypt(m2);
 let encryptedSum = publicKey.addition(c1, c2);
 let sum = privateKey.decrypt(encryptedSum); // m1 + m2
+
+// homorphic subtraction of two ciphtertexts (encrypted numbers)
+let c1 = publicKey.encrypt(m1);
+let c2 = publicKey.encrypt(m2);
+let encryptedSub = publicKey.subtraction(c1,c2);
+let sub = privateKey.decrypt(encryptedSum); // m1 - m2
 
 // multiplication by k
 let c1 = publicKey.encrypt(m1);

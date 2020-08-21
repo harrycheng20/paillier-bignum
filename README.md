@@ -1,6 +1,6 @@
 # A node.js implmentation of the Paillier cryptosystem supporting subtraction
 
-This is an extended version of the [paillier-bignum](https://github.com/juanelas/paillier-bigint). The change is adding a subtraction function to the Pailiier cryptosystem according to this [description](https://crypto.stackexchange.com/a/59448). In [Paillier Cryptosystem](https://en.wikipedia.org/wiki/Paillier_cryptosystem), the range of a message $m$ to be encrypted is $0\leq m <n$, in this package, because of introducing the subtraction function, the range of $m$ shrinks to $-n/4 < m < n/4$.
+This is an extended version of the [paillier-bignum](https://github.com/juanelas/paillier-bigint). The change is adding a subtraction function to the Pailiier cryptosystem according to this [description](https://crypto.stackexchange.com/a/59448). In [Paillier Cryptosystem](https://en.wikipedia.org/wiki/Paillier_cryptosystem), the range of a message `m` to be encrypted is \[0,n), in this package, because of introducing the subtraction function, the range of `m` shrinks to (-n/4,n/4).
 
 This node.js implementation relying on the [node-bignum](https://github.com/justmoon/node-bignum) library by Stephan Thomas. Bignum is an arbitrary precision integral arithmetic for Node.js using OpenSSL. For a pure javascript implementation that can be used on browsers, please visit [paillier-bigint](https://github.com/juanelas/paillier-bigint).
 

@@ -1,4 +1,4 @@
-# A node.js implementation of an extended Version for the Paillier cryptosystem
+# A node.js implmentation of the Paillier cryptosystem supporting Subtraction
 
 This is an extended version of the [paillier-bignum](https://github.com/juanelas/paillier-bigint). The change is adding a subtraction function to the Pailiier cryptosystem according to this [description](https://crypto.stackexchange.com/a/59448). In [Paillier Cryptosystem](https://en.wikipedia.org/wiki/Paillier_cryptosystem), the range of a message $m$ to be encrypted is $0\leq m <n$, in this package, because of introducing the subtraction function, the range of $m$ shrinks to $-n/4 < m < n/4$.
 

@@ -8,15 +8,15 @@
     "crypto",
     "cryptosystem"
   ],
-  "homepage": "https://github.com/juanelas/paillier-bignum#readme",
-  "bugs": "https://github.com/juanelas/paillier-bignum/issues",
+  "homepage": "https://github.com/harrycheng20/paillier-bignum#readme",
+  "bugs": "https://github.com/harrycheng20/paillier-bignum/issues",
   "license": "MIT",
   "author": {
-    "name": "Juan Hernández Serrano",
-    "email": "j.hernandez@upc.edu",
-    "url": "https://github.com/juanelas"
+    "name": "Xiang Cheng",
+    "email": "xiangcheng@vt.edu",
+    "url": "https://xiangcheng.link/"
   },
-  "repository": "github:juanelas/paillier-bignum",
+  "repository": "github.com/harrycheng20/paillier-bignum",
   "main": "./paillier.js",
   "directories": {
     "test": "test"
